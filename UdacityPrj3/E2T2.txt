@@ -1,0 +1,18 @@
+Question:- Research and analyze which of the vulnerabilities appear to be related to the code that was deployed for the environment in this project.
+
+Answer:- 
+1) EC2 Vulnerabilities
+a) Security Group configration is open to world for SSH on 22 port
+b) Custom TCP is open to world on 5000 port
+
+2) S3 Bucket configration
+a) Encryption is not enabled
+b) Logging was not enabled therefore we cannot really know who is uploading or downloading files
+c) Bucket was not readonly therefore anyone can download secret reciepe if they want.
+
+Question:- Bonus - provide recommendations on how to remediate the vulnerabilities.
+Answer:- 
+	In order to remediate we can take certain action
+a) Remove acsess inbound rule for SSH from 0.0.0.0/0
+b) Enable S3 logging so that you know who is accessing S3 buckets.
+c) Add S3 access based on IAM policy and change access of S3 from full access to read only access. 
