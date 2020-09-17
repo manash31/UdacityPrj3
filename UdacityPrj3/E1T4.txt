@@ -1,0 +1,18 @@
+Based on the architecture diagram, and the steps you have taken so far to upload data and access the application web service, identify at least 2 obvious poor practices as it relates to security.  Include justification.
+
+# Poor practice 1
+
+Security port was open 
+a) ssh from internet on port 22
+b) ssh from internet on port 5000
+
+
+# Poor practice 2
+
+1) On instance i-06ec9b96297cc891f, TCP port 21 which is associated with 'FTP' is reachable from the internet
+2)  On instance i-06ec9b96297cc891f, TCP port 20 which is associated with 'FTP' is reachable from the internet
+3) On instance i-06ec9b96297cc891f, UDP port 20 which is associated with 'FTP' is reachable from the internet
+4) On instance i-06ec9b96297cc891f, TCP port 23 which is associated with 'Telnet' is reachable from the internet
+5) On instance i-06ec9b96297cc891f, UDP port 21 which is associated with 'FTP' is reachable from the internet
+6) On instance i-06ec9b96297cc891f, UDP port 23 which is associated with 'Telnet' is reachable from the internet
+7) On instance i-06ec9b96297cc891f, TCP port 1521 which is associated with 'Oracle' is reachable from the internet
