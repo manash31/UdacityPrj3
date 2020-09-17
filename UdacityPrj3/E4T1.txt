@@ -2,10 +2,12 @@
 
 # Identify 2-3 changes that can be made to our environment to prevent an ssh brute force attack from the internet.
 
-1) Change Security group to all trafic from 0.0.0.0/0 
-2) Remove SSH from 0.0.0.0/0 
+1) What I understand from tutorial that best security that we should build server as immutable server.Therefore  Remove all the access from internet via SSH.
+2) Use system manager or session manager to access Servers.
+3) Use monitoring tool to quickly identify brute fore attack. 
+
+
 
 # Neither instance should have had access to the secret recipes bucket, in the even that instance API credentials were compromised how could we have prevented access to sensitive data.
 
-Observation:-
-a) Encrypt data of secret recieve
+Ans:- In case neither instance should have access to secret recipe bucket then we should use assume role feature where we can give access based on assume role. In case of assume role we dont need to create any credential that might get compromised.

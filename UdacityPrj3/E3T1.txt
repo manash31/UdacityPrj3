@@ -1,0 +1,14 @@
+# Describe GuardDuty findings that were detected related to the brute force attack
+Although I am unable to find out motinoring findings of guardduty but I can say its pretty decent tool to find out all the loop holes and security breaches that are related to AWS accounts and all the files located in S3.  
+
+# Research the AWS Guard Duty documentation page and explain how GuardDuty may have detected this attack - i.e. what was its source of information.
+
+What I understand is that Guardduty is a tool that scan thhrough 3 different datasources and display results of the scan as a dashboard.
+Datasource for guardduty:- a) Cloudtrail Events b) VPC logs c) DNS Logs.
+Everytime you enable Guardduty there is a detector that got install in to monitor that resource. Once you guardduty collect all the data based on the datasource as mentioned then guardduty application do its duedelegence and push all the findings as summary. 
+What is the information that you see:-
+a) Resources that is getting effected due to some unauthorized activity
+b) GuardDuty also shows all the action that has been taken
+c) Guardduty also show all location from ehre the action has been taken.
+
+Because there is so much logs and finding that is being collected by guardduty therefore guardduty also gives you filteration criteria that helps you to identify high priority findings.
