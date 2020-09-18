@@ -2,12 +2,17 @@
 
 # Identify 2-3 changes that can be made to our environment to prevent an ssh brute force attack from the internet.
 
-1) What I understand from tutorial that best security that we should build server as immutable server.Therefore  Remove all the access from internet via SSH.
-2) Use system manager or session manager to access Servers.
-3) Use monitoring tool to quickly identify brute fore attack. 
-
-
+Ans# In order to avoid anuy brute force attack
+a) Security Group Changes:-
+	* Remove all the SSH entry that is open to internet from port # 22
+	* Remove all the SSH entry that is open to internet from port # 5000
+b) Further disable password login to the server with following command.
+	
 
 # Neither instance should have had access to the secret recipes bucket, in the even that instance API credentials were compromised how could we have prevented access to sensitive data.
 
-Ans:- In case neither instance should have access to secret recipe bucket then we should use assume role feature where we can give access based on assume role. In case of assume role we dont need to create any credential that might get compromised.
+Ans:-
+a) Enable encryption in S3 bucket.
+	* This is one of the very important feature give by S3 service where user can encrypt all the files inside the bucket.
+b) Enable IAM policy to access S3 bucket
+	* This is another important feature where one can give access to role based access. One of the major benifit of role based access is that you can restrict access to S3 bucket via applciation deployed in EC2 or it can be given to other lambda services. Another benifit of role based access is that you don't need to store or preserve any credentials.
